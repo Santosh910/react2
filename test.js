@@ -1,5 +1,7 @@
 // array-it store multiple items in single variable
 
+// import { useState } from "react";
+
 //ex-1
 // const fruits = [];
 // fruits.push("banana", "apple", "peach");
@@ -363,10 +365,10 @@
 
 
 //ex-1
-// const array1 = [1, 4, 9, 16];
+const array1 = [1, 4, 9, 16];
 
-// const map1 = array1.map((x) => x * 2);
-// console.log(map1);
+const map1 = array1.map((x) => x * 2);
+console.log(map1);
 
 //ex-2
 
@@ -469,3 +471,14 @@
 // console.log(animals.slice(2));
 // console.log(animals.slice(2, 4));
 // console.log(animals.slice(1, 5));
+
+
+
+//useState hook-it is storage for function component
+
+
+const [speaks, dinesh] = useState({name: "",email:"",password:""});
+console.log(speaks)
+
+dinesh({[name]:value})
+console.log(speaks)

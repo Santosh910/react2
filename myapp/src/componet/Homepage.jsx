@@ -1,11 +1,17 @@
+import { useNavigate } from "react-router-dom";
 function Homepage() {
-    return(
+    const router = useNavigate()
+    function routerToLogin() {
+        router("/login1")
+    }
+  
+    return ( 
         <div>
-           <h1> Homepage </h1>
+            <h1> Homepage </h1>
 
-           <button>Go tO Login</button>
+            <button onClick={routerToLogin}>Go tO Login</button>
         </div>
     )
-}
+ }
 
 export default Homepage;
