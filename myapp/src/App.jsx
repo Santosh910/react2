@@ -15,10 +15,18 @@ import Effect4 from './componet/13-09/Effect4';
 import Params from './componet/15-09/Params';
 import SingleProduct from './componet/15-09/SingleProduct';
 import Mapping from './componet/16-09/Mapping';
+import Ternary from './componet/16-09/Ternary';
+import { Children, useState } from 'react';
+import StyledComponent from './componet/16-09/StyledComponent';
+import Counterse from './componet/16-09/Counterse';
+import DynamicStyles from './componet/20-09/DynamicStyles';
+import ChildrenProp from './componet/22-09/ChildrenProp';
+import Register2 from './componet/22-09/Register2';
 
 
 
 function App() {
+  const[LoggedIn,setLoggedIn] = useState(false);
   return (
     <div className="App">
       <Routes>
@@ -35,6 +43,12 @@ function App() {
         <Route exact path='/params' element={<Params />} />
         <Route exact path='/singleProduct/:id' element={<SingleProduct />} />
         <Route exact path='/mapping' element={<Mapping kuchbhi={'hii'} names={["Rahul", "Rohit", "virat"]} />} />
+        <Route exact path='/ternary' element={<Ternary isUserLoggedIn={LoggedIn} setLoggedIn={setLoggedIn}/>}/>
+        <Route exact path='/styled-components' element={<StyledComponent/>} />
+        <Route exact path='/counterse' element={<Counterse/>} />
+        <Route exact path='/dynamic-styles' element={<DynamicStyles/>} />
+        <Route exact path='/children-prop' element={<ChildrenProp/>} /> 
+        <Route exact path='/register2' element={<Register2/>} /> 
       </Routes>
     </div>
   );

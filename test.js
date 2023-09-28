@@ -466,19 +466,19 @@ console.log(map1);
 
 //18. Array.prototype.slice()
 
-// const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
-// console.log(animals);
-// console.log(animals.slice(2));
-// console.log(animals.slice(2, 4));
-// console.log(animals.slice(1, 5));
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+console.log(animals);
+console.log(animals.slice(2));
+console.log(animals.slice(2, 4));
+console.log(animals.slice(1, 5));
 
 
 
 //useState hook-it is storage for function component
 
 
-const [speaks, dinesh] = useState({name: "",email:"",password:""});
-console.log(speaks)
+// const [speaks, dinesh] = useState({name: "",email:"",password:""});
+// console.log(speaks)
 
-dinesh({[name]:value})
-console.log(speaks)
+// dinesh({[name]:value})
+// console.log(speaks)
