@@ -22,6 +22,9 @@ import Counterse from './componet/16-09/Counterse';
 import DynamicStyles from './componet/20-09/DynamicStyles';
 import ChildrenProp from './componet/22-09/ChildrenProp';
 import Register2 from './componet/22-09/Register2';
+import PageNotFound from './componet/29-09/PageNotFound';
+import { ClassComponent } from './componet/29-09/ClassComponent';
+
 
 
 
@@ -30,6 +33,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
+      <Route exact path='/*'  element={<PageNotFound />} />
         <Route path='/' element={<Homepage />} />
 
         <Route exact path='/register' element={<Register />} />
@@ -49,6 +53,8 @@ function App() {
         <Route exact path='/dynamic-styles' element={<DynamicStyles/>} />
         <Route exact path='/children-prop' element={<ChildrenProp/>} /> 
         <Route exact path='/register2' element={<Register2/>} /> 
+        <Route exact path='/classComponent ' element={<ClassComponent/> } />
+        
       </Routes>
     </div>
   );

@@ -482,3 +482,17 @@ console.log(animals.slice(1, 5));
 
 // dinesh({[name]:value})
 // console.log(speaks)
+class Person {
+    constructor(name, age) {
+    this.name = name;
+    this.age = age;
+    }
+    sayHello() {
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    }
+    myage(){
+        console.log(`hello,my age is ${this.age}`)
+    }
+    }
+    const john = new Person('John', 30);
+    john.sayHello(); 
