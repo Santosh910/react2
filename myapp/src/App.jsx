@@ -25,17 +25,18 @@ import Register2 from './componet/22-09/Register2';
 import PageNotFound from './componet/29-09/PageNotFound';
 import { ClassComponent } from './componet/29-09/ClassComponent';
 import Products from './componet/30-09/Products';
+import SingleProductNew from './componet/1-10/SingleProductNew';
 
 
 
 
 
 function App() {
-  const[LoggedIn,setLoggedIn] = useState(false);
+  const [LoggedIn, setLoggedIn] = useState(false);
   return (
     <div className="App">
       <Routes>
-      <Route exact path='/*'  element={<PageNotFound />} />
+        <Route exact path='/*' element={<PageNotFound />} />
         <Route path='/' element={<Homepage />} />
 
         <Route exact path='/register' element={<Register />} />
@@ -49,15 +50,16 @@ function App() {
         <Route exact path='/params' element={<Params />} />
         <Route exact path='/singleProduct/:id' element={<SingleProduct />} />
         <Route exact path='/mapping' element={<Mapping kuchbhi={'hii'} names={["Rahul", "Rohit", "virat"]} />} />
-        <Route exact path='/ternary' element={<Ternary isUserLoggedIn={LoggedIn} setLoggedIn={setLoggedIn}/>}/>
-        <Route exact path='/styled-components' element={<StyledComponent/>} />
-        <Route exact path='/counterse' element={<Counterse/>} />
-        <Route exact path='/dynamic-styles' element={<DynamicStyles/>} />
-        <Route exact path='/children-prop' element={<ChildrenProp/>} /> 
-        <Route exact path='/register2' element={<Register2/>} /> 
-        <Route exact path='/classComponent ' element={<ClassComponent/> } />
-        <Route exact path='/products' element={<Products/>} />
-        
+        <Route exact path='/ternary' element={<Ternary isUserLoggedIn={LoggedIn} setLoggedIn={setLoggedIn} />} />
+        <Route exact path='/styled-components' element={<StyledComponent />} />
+        <Route exact path='/counterse' element={<Counterse />} />
+        <Route exact path='/dynamic-styles' element={<DynamicStyles />} />
+        <Route exact path='/children-prop' element={<ChildrenProp />} />
+        <Route exact path='/register2' element={<Register2 />} />
+        <Route exact path='/classComponent ' element={<ClassComponent />} />
+        <Route exact path='/products' element={<Products />} />
+        <Route exact path='/single-product/:id' element={<SingleProductNew />} />
+
       </Routes>
     </div>
   );
