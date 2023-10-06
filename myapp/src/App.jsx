@@ -26,6 +26,7 @@ import PageNotFound from './componet/29-09/PageNotFound';
 import { ClassComponent } from './componet/29-09/ClassComponent';
 import Products from './componet/30-09/Products';
 import SingleProductNew from './componet/1-10/SingleProductNew';
+import AddProduct from './componet/4-10/AddProduct';
 
 
 
@@ -59,6 +60,7 @@ function App() {
         <Route exact path='/classComponent ' element={<ClassComponent />} />
         <Route exact path='/products' element={<Products />} />
         <Route exact path='/single-product/:id' element={<SingleProductNew />} />
+        <Route exact path='/add-product' element={<AddProduct/>}/>
 
       </Routes>
     </div>

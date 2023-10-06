@@ -3,47 +3,47 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 const SingleProductNew = () => {
-  const [productData,setProductData] = useState({})
-  const{id} = useParams();
+  const [productData, setProductData] = useState({})
+  const { id } = useParams();
 
-  useEffect(()=> {
+  useEffect(() => {
 
-    async function getSingleProductData(){
-      try{
-        const {data} = await axios.get(`https://fakestoreapi.com/products/${id}`)
-      if(data){
-        setProductData(data)
-      }
-      }catch(error){
+    async function getSingleProductData() {
+      try {
+        const { data } = await axios.get(`https://fakestoreapi.com/products/${id}`)
+        if (data) {
+          setProductData(data)
+        }
+      } catch (error) {
         console.log(error)
       }
-      
-      
+
+
     }
 
-    if(id){
-        getSingleProductData();
+    if (id) {
+      getSingleProductData();
     }
-  },[id])
+  }, [id])
 
   return (
     <div>
       {productData?.id ?
-      <div style={{display:'flex',justifyContent:'space-between'}}>
-        <div style={{width:'40%',border:"5px solid black"}}>
-          <img style={{width:'60%',height:'85%'}} src={productData.image} alt="" />
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <div style={{ width: '40%', border: "5px solid black" }}>
+            <img style={{ width: '60%', height: '85%' }} src={productData.image} alt="" />
           </div>
-        <div style={{width:'40%',border:"5px solid black"}}>
-          <h1>{productData.title}</h1>
-          <h4>Category:{productData.category}</h4>
-          <h4>Description:{productData.description}</h4>
-          <h4>Price:{productData.price}</h4>
-          <h4>Rating:{productData.rating.rate}</h4>
-          <h4>NO of rating:{productData.rating.count}</h4>
+          <div style={{ width: '40%', border: "5px solid black" }}>
+            <h1>{productData.title}</h1>
+            <h4>Category:{productData.category}</h4>
+            <h4>Description:{productData.description}</h4>
+            <h4>Price:{productData.price}</h4>
+            <h4>Rating:{productData.rating.rate}</h4>
+            <h4>NO of rating:{productData.rating.count}</h4>
           </div>
-      </div>
-      :
-      <div>Loading.....</div>
+        </div>
+        :
+        <div>Loading.....</div>
       }
     </div>
   )
