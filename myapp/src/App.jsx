@@ -27,6 +27,7 @@ import { ClassComponent } from './componet/29-09/ClassComponent';
 import Products from './componet/30-09/Products';
 import SingleProductNew from './componet/1-10/SingleProductNew';
 import AddProduct from './componet/4-10/AddProduct';
+import UseMemo from './componet/6-10/UseMemo';
 
 
 
@@ -61,7 +62,7 @@ function App() {
         <Route exact path='/products' element={<Products />} />
         <Route exact path='/single-product/:id' element={<SingleProductNew />} />
         <Route exact path='/add-product' element={<AddProduct/>}/>
-
+        <Route exact path='/usememo'  element={<UseMemo/>} />
       </Routes>
     </div>
   );
