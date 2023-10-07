@@ -28,6 +28,8 @@ import Products from './componet/30-09/Products';
 import SingleProductNew from './componet/1-10/SingleProductNew';
 import AddProduct from './componet/4-10/AddProduct';
 import UseMemo from './componet/6-10/UseMemo';
+import UseCallback from './componet/7-10/UseCallback';
+import Todos from './componet/7-10/Todos';
 
 
 
@@ -63,6 +65,8 @@ function App() {
         <Route exact path='/single-product/:id' element={<SingleProductNew />} />
         <Route exact path='/add-product' element={<AddProduct/>}/>
         <Route exact path='/usememo'  element={<UseMemo/>} />
+        <Route exact path='/useCallback' element={<UseCallback/>}/>
+        <Route exact path='/todos' element={<Todos/>}/>
       </Routes>
     </div>
   );
