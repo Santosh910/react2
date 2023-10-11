@@ -5,12 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast'
+import GlobalContext from './componet/Context/GlobalContext';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <Toaster
+      <Toaster
         position="top-center"
         reverseOrder={false}
         gutter={8}
@@ -35,9 +37,12 @@ root.render(
           },
         }}
       />
-    <App />
-    </BrowserRouter> 
-    
+      <App />
+      <GlobalContext>
+        <App />
+      </GlobalContext>
+    </BrowserRouter>
+
   </React.StrictMode>
 );
 

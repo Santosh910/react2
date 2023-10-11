@@ -30,6 +30,9 @@ import AddProduct from './componet/4-10/AddProduct';
 import UseMemo from './componet/6-10/UseMemo';
 import UseCallback from './componet/7-10/UseCallback';
 import Todos from './componet/7-10/Todos';
+import UseReducer from './componet/8-10/UseReducer';
+import TestReducer from './componet/8-10/TestReducer';
+import GlobalContext from './componet/Context/GlobalContext';
 
 
 
@@ -67,6 +70,9 @@ function App() {
         <Route exact path='/usememo'  element={<UseMemo/>} />
         <Route exact path='/useCallback' element={<UseCallback/>}/>
         <Route exact path='/todos' element={<Todos/>}/>
+        <Route exact path='/usereducer' element={<UseReducer/>}/>
+        <Route exact path='/testReducer' element={<TestReducer/>}/>
+        <Route exact path='/globalContext' element={<GlobalContext/>}/>
       </Routes>
     </div>
   );
