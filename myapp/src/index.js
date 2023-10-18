@@ -37,7 +37,7 @@ root.render(
           },
         }}
       />
-      <App />
+      
       <GlobalContext>
         <App />
       </GlobalContext>

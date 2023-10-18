@@ -19,6 +19,8 @@ function Homepage() {
             <h1> Homepage </h1>
             <h1>Counter :{state.counter}</h1>
             <button onClick={() => dispatch({ type: "INCREMENT" })}>+</button>
+            {/* <button onClick={() => dispatch({ type: "DECREMENT " })}>-</button>
+            <button onClick={() => dispatch({ type: "RESET " })}>reset</button> */}
             <button onClick={routerToLogin}>Go tO Login</button>
             <button onClick={() => router('/register')}>go to register</button>
             <button onClick={() => toast.error("clicked")}>click for toast error</button>

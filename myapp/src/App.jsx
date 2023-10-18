@@ -33,6 +33,7 @@ import Todos from './componet/7-10/Todos';
 import UseReducer from './componet/8-10/UseReducer';
 import TestReducer from './componet/8-10/TestReducer';
 import GlobalContext from './componet/Context/GlobalContext';
+import CustomHook from './componet/14-10/CustomHook';
 
 
 
@@ -73,6 +74,7 @@ function App() {
         <Route exact path='/usereducer' element={<UseReducer/>}/>
         <Route exact path='/testReducer' element={<TestReducer/>}/>
         <Route exact path='/globalContext' element={<GlobalContext/>}/>
+        <Route exact path='/custome-hook' element={<CustomHook/>}/>
       </Routes>
     </div>
   );
