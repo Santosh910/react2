@@ -177,7 +177,7 @@
 //         var r = parseInt(x % 10)
 //         t = t * 10 + r
 //         x = parseInt(x / 10)
-        
+
 //         // result.push(r)
 //         // console.log(r)
 //     }
@@ -200,13 +200,95 @@
 
 // console.log(isPalindrome(x))
 
-var x = "racecar";
+// var x = "racecar";
 
-var isPalindrome = function (str){
-    // const numString = number.toString()
-    const numStringArrRev = str.split('').reverse()
-    const numRev = (numStringArrRev.join(''))
-    return numRev === str;
+// var isPalindrome = function (str){
+//     // const numString = number.toString()
+//     const numStringArrRev = str.split('').reverse()
+//     const numRev = (numStringArrRev.join(''))
+//     return numRev === str;
+// }
+
+// console.log(isPalindrome(x))
+
+// var nums = [1,1,2];
+//  console.log(nums)
+
+
+// function duplicate(nums){
+//     var result = []
+//     let i = 0;
+//     for(let j = 1;j < nums.length;j++){
+//         console.log(j)
+//         if( nums[i] !== nums[j]){
+//             i++;
+//             nums[i] = nums[j]
+
+//             console.log(nums[i])
+//             result.push(nums[i])
+//             console.log(result)
+//         }
+//     }
+//     return i++;
+
+// };
+
+// console.log(duplicate(nums))
+
+// var s = "PAYPALISHIRING";
+// var numRows = 3;
+
+
+
+
+
+// var matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+// // console.log(matrix.length)
+
+// var rotate = function (matrix) {
+//     const n = matrix.length;
+//     const rotated = Array(n).fill(null).map(() => Array(n).fill(0))
+//     // console.log(map)
+//     for (let i = 0; i < n; i++) {
+//         // console.log(matrix[i])
+//         for (let j = 0; j < n; j++) {
+//             // console.log(matrix[j])
+//            rotated[j][n-i-1] = matrix[i][j];
+//            console.log(matrix[i][j])
+//         //    console.log(rotated[n-i-1])
+//         }
+//     }
+//     for(let i = 0;i < n;i++){
+//              matrix[i] = rotated[i];
+//              console.log(matrix[i])
+//     }
+    
+// };
+
+// console.log(rotate(matrix))
+
+
+var nums = [1,3,5,6];
+var target = 5;
+
+var searchInsert = function (nums, target) {
+    let start = 0, end = nums.length - 1;
+    let ans = nums.length; // Default answer when target is greater than all elements
+
+    while (start <= end) {
+        let mid = Math.floor((start + end) / 2);
+console.log(mid)
+        if (nums[mid] === target) {
+            return mid;
+        } else if (nums[mid] < target) {
+            start = mid + 1;
+        } else {
+            ans = mid; // Update the answer to the current index
+            end = mid - 1;
+        }
+    }
+    return ans;
+
 }
 
-console.log(isPalindrome(x))
+console.log(searchInsert(nums, target) )

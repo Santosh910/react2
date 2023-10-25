@@ -278,15 +278,15 @@
 
 //9. array.prototype.fill()
 
-// const array1 = [1, 2, 3, 4];
+const array1 = [1, 2, 3, 4];
 
-// //fill with 0 from position 2 until position 4
+//fill with 0 from position 2 until position 4
 
-// console.log(array1.fill(0, 2, 4));
+console.log(array1.fill(0,2));
 
 // console.log([1, 2, 3].fill(4)); // [4, 4, 4]
 // console.log([1, 2, 3].fill(4, 1)); // [1, 4, 4]
-// console.log([1, 2, 3].fill(4, 1, 2)); // [1, 4, 3]
+console.log([1, 2, 3].fill(4, 1, 2)); // [1, 4, 3]
 // console.log([1, 2, 3].fill(4, 1, 1)); // [1, 2, 3]
 // console.log([1, 2, 3].fill(4, 3, 3)); // [1, 2, 3]
 // console.log([1, 2, 3].fill(4, -3, -2)); // [4, 2, 3]
@@ -365,10 +365,10 @@
 
 
 //ex-1
-const array1 = [1, 4, 9, 16];
+// const array1 = [1, 4, 9, 16];
 
-const map1 = array1.map((x) => x * 2);
-console.log(map1);
+// const map1 = array1.map((x) => x * 2);
+// console.log(map1);
 
 //ex-2
 
@@ -466,11 +466,11 @@ console.log(map1);
 
 //18. Array.prototype.slice()
 
-const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
-console.log(animals);
-console.log(animals.slice(2));
-console.log(animals.slice(2, 4));
-console.log(animals.slice(1, 5));
+// const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+// console.log(animals);
+// console.log(animals.slice(2));
+// console.log(animals.slice(2, 4));
+// console.log(animals.slice(1, 5));
 
 
 
@@ -482,17 +482,17 @@ console.log(animals.slice(1, 5));
 
 // dinesh({[name]:value})
 // console.log(speaks)
-class Person {
-    constructor(name, age) {
-    this.name = name;
-    this.age = age;
-    }
-    sayHello() {
-    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
-    }
-    myage(){
-        console.log(`hello,my age is ${this.age}`)
-    }
-    }
-    const john = new Person('John', 30);
-    john.sayHello(); 
+// class Person {
+//     constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//     }
+//     sayHello() {
+//     console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+//     }
+//     myage(){
+//         console.log(`hello,my age is ${this.age}`)
+//     }
+//     }
+//     const john = new Person('John', 30);
+//     john.sayHello(); 
