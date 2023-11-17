@@ -10,11 +10,15 @@ const Products = () => {
         // toast.success("Page rendered on browser..")
         async function getProducts() {
             try {
-                const { data } = await axios.get('https://fakestoreapi.com/products');
+                // const { data } = await axios.get('https://fakestoreapi.com/products');
+                const { data } = await axios.get('https://localhost:8000/api/v1/get-pro/get-product'); 
                 // console.log(data, "data here")
-                setProducts(data)
+                // setProducts(data)
+                if(data.success){
+                    setProducts(data.products)
+                }
             } catch (error) {
-                toast.error(error.message)
+                toast.error(error.data.message)
             }
         }
         getProducts()

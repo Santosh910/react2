@@ -262,33 +262,89 @@
 //              matrix[i] = rotated[i];
 //              console.log(matrix[i])
 //     }
-    
+
 // };
 
 // console.log(rotate(matrix))
 
 
-var nums = [1,3,5,6];
-var target = 5;
+// var nums = [1,3,5,6];
+// var target = 5;
 
-var searchInsert = function (nums, target) {
-    let start = 0, end = nums.length - 1;
-    let ans = nums.length; // Default answer when target is greater than all elements
+// var searchInsert = function (nums, target) {
+//     let start = 0, end = nums.length - 1;
+//     let ans = nums.length; // Default answer when target is greater than all elements
 
-    while (start <= end) {
-        let mid = Math.floor((start + end) / 2);
-console.log(mid)
-        if (nums[mid] === target) {
-            return mid;
-        } else if (nums[mid] < target) {
-            start = mid + 1;
-        } else {
-            ans = mid; // Update the answer to the current index
-            end = mid - 1;
-        }
-    }
-    return ans;
+//     while (start <= end) {
+//         let mid = Math.floor((start + end) / 2);
+// console.log(mid)
+//         if (nums[mid] === target) {
+//             return mid;
+//         } else if (nums[mid] < target) {
+//             start = mid + 1;
+//         } else {
+//             ans = mid; // Update the answer to the current index
+//             end = mid - 1;
+//         }
+//     }
+//     return ans;
 
-}
+// }
 
-console.log(searchInsert(nums, target) )
+// console.log(searchInsert(nums, target) )
+
+
+// var list1 = [1, 2, 4];
+// var list2 = [1, 3, 4];
+
+
+// function mergeTwoLists(l1, l2) {
+//     if (!l1) return l2;
+//     else if (!l2) return l1;
+//     else if (l1.val <= l2.val) {
+//         l1.next = mergeTwoLists(l1.next, l2);
+//         return l1;
+//     } else {
+//         l2.next = mergeTwoLists(l1, l2.next);
+//         return l2
+//     }
+
+// }
+
+// console.log(mergeTwoLists(list1, list2))
+
+// var args = []
+
+// function createHelloWorld(a) {
+//     const greeting = "Hello World";
+
+//     return function(...args) {
+//       return greeting;
+//     };
+//   }
+
+//   console.log(createHelloWorld(args))
+
+// const nums1 = [4, 2, 3, 5];
+// const nums2 = [2, 3];
+// const nums3 = [];
+
+
+// for(let i = 0;i <= nums1.length;i++){
+//   for(let j=0;j <= nums2.length;j++){
+//     if(nums1[i] == nums2[j]){
+//       nums3[i+1] = nums1[i]
+
+//     }
+
+//   }
+
+// }
+// console.log(nums3)
+// const intersection = nums1.filter((curEl) => {
+//     return nums2.includes(curEl);
+// });
+// console.log(intersection)
+
+// const union = [...new Set([...nums1, ...nums2]) ]
+// console.log(union)
